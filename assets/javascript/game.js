@@ -42,7 +42,7 @@ $(document).ready(function() {
                 $('#container').find(":nth-child(" + (i + 1) + ")").css("color", "#EFEFEF").addClass("winner");
                 matchFound = true;
             }
-        }
+		}
 
         //Check for winner
         var goodGuesses = [];
@@ -56,7 +56,10 @@ $(document).ready(function() {
                     $(".category").append("<br><button enabled class='play-again'>Play again?</button>");
                 }
             }
-        });
+		});
+		
+
+		console.log(userGuess);
 
         // If no match, increase count and add appropriate image
         if (matchFound === false) {
