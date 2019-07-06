@@ -57,9 +57,6 @@ $(document).ready(function() {
                 }
             }
 		});
-		
-
-		console.log(userGuess);
 
         // If no match, increase count and add appropriate image
         if (matchFound === false) {
