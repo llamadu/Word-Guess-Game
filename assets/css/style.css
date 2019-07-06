@@ -43,8 +43,8 @@ img {
 
 button {
 	color: #EFEFEF; /*light gray */
-	border: 1px solid #3AA9D8; /*orange*/
-	background: #3AA9D8; /*orange*/
+	border: 1px solid #3AA9D8; /*blue*/
+	background: #3AA9D8; /*blue*/
 	width: 45px;
 	height: 45px;
 	font-size: 14px;
@@ -79,5 +79,5 @@ button:focus {
 	width: 190px;
 	height: 45px;
 	background: #4ABDAC; /*green*/
-	border: 1px solid #4ABDAC; /*orange*/
+	border: 1px solid #4ABDAC; /*green*/
 }
