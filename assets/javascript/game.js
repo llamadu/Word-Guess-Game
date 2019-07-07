@@ -10,7 +10,7 @@ $(document).ready(function() {
     var randomWord = (randomCategoryArray[Math.floor((Math.random() * randomCategoryArray.length))]).toUpperCase();
     console.log(randomWord);
     var randomWordArray = randomWord.split("");
-
+    var winCount = 0;
     // Print category name
     if ($.inArray("confidence", randomCategoryArray) > -1) {
         $(".category").text("There's nothing wrong with having a tree as a friend.");
@@ -52,12 +52,14 @@ $(document).ready(function() {
                 if (goodGuesses.length === randomWordArray.length) {
                     $("#container").hide();
                     $("button").prop("disabled", "true");
-                    $(".category").text("You guessed it! There's nothing in the world that breeds success like success.");
+                    $(".category").text("You guessed it! There's nothing in the world that breeds success like success.");                    
+                    winCount++;
+                    $(".winCounter").innerText = "Wins: " + winCount;
                     $(".category").append("<br><button enabled class='play-again'>Play again?</button>");
                 }
             }
-		});
-
+        });
+        
         // If no match, increase count and add appropriate image
         if (matchFound === false) {
             wrongGuesses += 1;
@@ -76,6 +78,8 @@ $(document).ready(function() {
         $(".play-again").on("click", function(){
             location.reload();
         });
+        
+        // ****Ideally play again button would reset everything but wins instead of refressing page so that win count would function/be accurate. Bob Ross has different ideas on the topic.***
 
     }); // End button click
 
